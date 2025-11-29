@@ -5,6 +5,12 @@ $sql = "SELECT * FROM meals";
 $result = $conn->query($sql);
 ?>
 
+<a href="index.php">Home</a> |
+<a href="addmeal.php">Add Meal</a> |
+<a href="viewmeals.php">View Meals</a>
+<br><br>
+
+
 <h2>All Meals</h2>
 
 <table border="1" cellpadding="10">
