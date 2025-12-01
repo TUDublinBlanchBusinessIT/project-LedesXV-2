@@ -3,10 +3,10 @@ USE mealtrackerdb;
 
 CREATE TABLE meal_types (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    meal_name VARCHAR(50)
+    type_name VARCHAR(50)
 );
 
-INSERT INTO meal_types (meal_name) VALUES
+INSERT INTO meal_types (type_name) VALUES
 ('Breakfast'),
 ('Lunch'),
 ('Dinner'),
@@ -14,6 +14,7 @@ INSERT INTO meal_types (meal_name) VALUES
 
 CREATE TABLE meals (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    meal_name VARCHAR(100),
     meal_type_id INT,
     calories INT,
     protein INT,

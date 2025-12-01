@@ -8,9 +8,17 @@
 
 <form action="insertmeal.php" method="POST">
 
-    <label>Meal Type</label>
-    <input type="text" name="meal_type" required>
+    <label>Meal Name</label>
+    <input type="text" name="meal_name" required>
 
+    <br><br>
+
+    <select name="meal_type_id" required>
+        <option value="1">Breakfast</option>
+        <option value="2">Lunch</option>
+        <option value="3">Dinner</option>
+        <option value="4">Snack</option>
+    </select>
     <br><br>
 
     <label>Calories</label>
