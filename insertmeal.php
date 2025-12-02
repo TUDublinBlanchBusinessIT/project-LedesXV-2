@@ -15,6 +15,14 @@ $fat       = $_POST['fat'];
 $carbs     = $_POST['carbs'];
 $meal_date = $_POST['meal_date'];
 
+if ($meal_name == "" || $meal_type_id == "" || $calories == "" || $protein == "" || $fat == "" || $carbs == "" || $meal_date == "") {
+    die("Please fill all fields.");
+}
+
+if ($calories < 0 || $protein < 0 || $fat < 0 || $carbs < 0) {
+    die("Values cannot be negative.");
+}
+
 $sql = "INSERT INTO meals (meal_name,meal_type_id, calories, protein, fat, carbs, meal_date)
         VALUES ('$meal_name', $meal_type_id, $calories, $protein, $fat, $carbs, '$meal_date')";
 
