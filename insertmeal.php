@@ -1,7 +1,3 @@
-<a href="index.php">Home</a> |
-<a href="addmeal.php">Add Meal</a> |
-<a href="viewmeals.php">View Meals</a>
-<br><br>
 
 
 <?php

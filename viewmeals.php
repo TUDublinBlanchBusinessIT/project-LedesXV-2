@@ -1,3 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Meal</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        nav a {
+            margin-right: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 95%;
+            margin-top: 20px;
+        }
+        th {
+            background-color: #efefef;
+            padding: 10px;
+            font-weight: bold;
+        }
+        td {
+            padding: 10px;
+        }
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        h2 {
+            text-align: center;
+        }
+        form input, form select {
+            padding: 6px;
+            width: 250px;
+        }
+    </style>
+
+</head>
+
+<body>
 <?php
 include "db.php";
 
@@ -15,13 +56,14 @@ $sql = "SELECT
 $result = $conn->query($sql);
 ?>
 
-<a href="index.php">Home</a> |
-<a href="addmeal.php">Add Meal</a> |
-<a href="viewmeals.php">View Meals</a>
+<nav>
+    <a href="index.php">Home</a> |
+    <a href="addmeal.php">Add Meal</a> |
+    <a href="viewmeals.php">View Meals</a>
+</nav>
 <br><br>
 
 
-<h2>All Meals</h2>
 
 <table border="1" cellpadding="10">
     <tr>
@@ -49,4 +91,9 @@ $result = $conn->query($sql);
 </table>
 
 <br>
-<a href="addmeal.php">Add Another Meal</a>
+<nav>
+    <a href="addmeal.php">Add Another Meal</a>
+</nav>
+
+</body>
+</html>
