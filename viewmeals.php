@@ -44,6 +44,7 @@ include "db.php";
 
 $sql = "SELECT 
             meals.meal_name,
+            meal_types.recommended_time,
             meal_types.type_name,
             meals.calories,
             meals.protein,
@@ -68,6 +69,7 @@ $result = $conn->query($sql);
 <table border="1" cellpadding="10">
     <tr>
         <th>Meal Type</th>
+        <th>Recommended Time</th>
         <th>Meal Name</th>
         <th>Calories</th>
         <th>Protein</th>
@@ -79,6 +81,7 @@ $result = $conn->query($sql);
     <?php while($row = $result->fetch_assoc()): ?>
         <tr>
             <td><?php echo $row['type_name']; ?></td>
+            <td><?php echo $row['recommended_time']; ?></td>
             <td><?php echo $row['meal_name']; ?></td>
             <td><?php echo $row['calories']; ?></td>
             <td><?php echo $row['protein']; ?></td>
