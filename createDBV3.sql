@@ -3,6 +3,7 @@ USE mealtrackerdb;
 
 CREATE TABLE meal_types (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    type_name VARCHAR(50)
     recommended_time VARCHAR(100)
 );
 
