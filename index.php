@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['user'])) { 
+    header("Location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +33,9 @@
 
 <nav>
     <a href="addmeal.php">Add Meal</a><br>
-    <a href="viewmeals.php">View Meals</a>
+    <a href="viewmeals.php">View Meals</a><br>
+    <a href="logout.php">Logout</a>
+
 </nav>
 
 </body>
