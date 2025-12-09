@@ -9,5 +9,7 @@ This project is a simple PHP and MySQL web application. It allows users to recor
 - Tracks calories, protein, fat and carbs  
 - Records the date of each meal 
 - Records the type of meal (breakfast, lunch, dinner, snack)
+- Allows users to log in and log out
+-Delete meal information
 
 

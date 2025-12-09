@@ -51,6 +51,7 @@ if(!isset($_SESSION['user'])) {
 include "db.php";
 
 $sql = "SELECT 
+            meals.id,
             meals.meal_name,
             meal_types.recommended_time,
             meal_types.type_name,
@@ -84,6 +85,7 @@ $result = $conn->query($sql);
         <th>Fat</th>
         <th>Carbs</th>
         <th>Date</th>
+        <th>Delete</th>
     </tr>
 
     <?php while($row = $result->fetch_assoc()): ?>
@@ -96,6 +98,7 @@ $result = $conn->query($sql);
             <td><?php echo $row['fat']; ?></td>
             <td><?php echo $row['carbs']; ?></td>
             <td><?php echo $row['meal_date']; ?></td>
+            <td><a href="deleteMeal.php?id=<?= $row['id']; ?>" style="color:red;">Delete</a></td>
         </tr>
     <?php endwhile; ?>
 

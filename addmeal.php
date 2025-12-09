@@ -69,10 +69,12 @@ if(!isset($_SESSION['user'])) {
     </select>
     <br><br>
 
-    <label>Calories</label>
-    <input type="number" name="calories" required>
-
+    <label>Calories:</label><br>
+    <input type="range" name="calories" min="0" max="4000" value="500" id="calSlider" required
+        oninput="output.value = calSlider.value">
+    <output id="output">500</output> kcal
     <br><br>
+
 
     <label>Protein</label>
     <input type="number" name="protein" required>
